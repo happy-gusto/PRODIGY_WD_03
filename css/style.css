@@ -1,0 +1,65 @@
+:root {
+    --x-color: rgb(48,86,211);
+    --o-color: rgb(139, 0, 0);
+    --red-shadow: rgb(255, 111, 133);
+    --blue-shadow: rgba(114, 175, 195, 0.8);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0; /* Light background for neomorphic effect */
+    color: black;
+    font-family: 'Arial', sans-serif;
+    box-shadow: inset 8px 8px 15px rgba(255, 255, 255, 0.8), inset -8px -8px 15px rgba(200, 200, 200, 0.5);
+    border-radius: 20px;
+}
+
+h1 { margin-bottom: 20px; }
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0; /* No gap between cells */
+    border-radius: 20px;
+    overflow: hidden; /* Hide edges */
+    border: 5px solid lightgrey; /* Thick divider */
+    background-color: #e0e0e0; /* Same as body for seamless look */
+    box-shadow: inset 4px 4px 10px rgba(255, 255, 255, 0.9), inset -4px -4px 10px rgba(200, 200, 200, 0.5);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    position: relative; /* Transparent to maintain spacing */
+    border-radius: 15px; /* Rounded corners for cells */
+    background-color: #e0e0e0; /* Same as board */
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.8), inset -2px -2px 5px rgba(200, 200, 200, 0.5);
+}
+.cell:hover {
+    
+}
+
+.cell.x {
+    color: rgb(139, 0, 0);
+    text-shadow: 0 0 10px rgb(255, 111, 133), 0 0 5px rgb(255, 111, 133);
+}
+
+.cell.o {
+    color: rgb(48, 86, 211);
+    text-shadow: 0 0 3px rgba(114, 175, 195, 0.8), 0 0 5px rgba(114, 175, 195, 0.8);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.5em; 
+    text-align: center;
+}
